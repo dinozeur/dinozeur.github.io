@@ -1,16 +1,179 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.4">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Doe's Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header styles */
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        /* Navigation menu */
+        nav {
+            background: #34495e;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+        }
+
+        nav a:hover {
+            background-color: #40576b;
+        }
+
+        /* Main content container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Section headings */
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+            margin: 2rem 0;
+        }
+
+        /* Portfolio grid */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .project-card {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+
+        /* Contact section */
+        .contact-info {
+            list-style: none;
+            padding: 1rem 0;
+        }
+
+        .contact-info li {
+            margin: 0.5rem 0;
+        }
+
+        /* Footer styles */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            nav {
+                display: flex;
+                flex-direction: column;
+            }
+            nav a {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
 </head>
 <body>
-<p class="p1">Hello World! My name is Tao Qiu</p>
+    <header>
+        <h1>John Doe</h1>
+        <p>Web Developer & Digital Creator</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Passionate web developer with 5+ years of experience creating responsive websites and web applications. Specializing in front-end development and user experience design.</p>
+        </section>
+
+        <section id="portfolio">
+            <h2>My Portfolio</h2>
+            <div class="portfolio-grid">
+                <div class="project-card">
+                    <h3>E-commerce Platform</h3>
+                    <p>Responsive online shopping platform built with React and Node.js</p>
+                </div>
+                <div class="project-card">
+                    <h3>Task Management App</h3>
+                    <p>Cloud-based productivity tool with real-time collaboration</p>
+                </div>
+                <div class="project-card">
+                    <h3>Portfolio Website</h3>
+                    <p>Custom WordPress theme development for creative professionals</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li>HTML5, CSS3, JavaScript (ES6+)</li>
+                <li>React, Node.js, Python</li>
+                <li>UI/UX Design, Responsive Design</li>
+                <li>Git, Webpack, REST APIs</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <ul class="contact-info">
+                <li>Email: your.email@example.com</li>
+                <li>LinkedIn: linkedin.com/in/yourprofile</li>
+                <li>GitHub: github.com/yourusername</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2023 John Doe. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
